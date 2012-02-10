@@ -1,0 +1,107 @@
+<div id="pageContent">
+	<div id="providerReports">
+		<div class="groupList">
+			<label class="open"><h2>Outliers</h2></label>
+			<div>
+				<ul class="patientList">
+				  <% @outliers.each do |outlier| %>
+					<li><%= outlier['name'] %><%= " - #{outlier['subtitle']}" if outlier['subtitle'] %></li>
+					<% end %>
+				</ul>
+			</div>
+    </div>
+		<div class="groupList">
+			<label class="open"><h2>Manual Exclusions</h2></label> 
+			<div>
+				<ul class="patientList">
+				  <% @manual_exclusions.each do |exclusion| %>
+					<li><%= exclusion['name'] %><%= " - #{exclusion['subtitle']}" if exclusion['subtitle'] %></li>
+					<% end %>
+				</ul>
+			</div>
+    </div>
+  </div>
+  <div id="dashboardPeriod">
+    <div id="patientName" class="main measureDetailTable">
+      <dl>
+        <dt>patient name:</dt>
+        <dd><h1 id="patientLastName"><%= @patient.last %>, <%= @patient.first %></h1></dd>
+      </dl>
+          <dl>
+        <dt>effective date:</dt>
+        <dd  id="effectiveDate"><%= display_time(@effective_date) %></dd>
+      </dl>
+    </div>
+    <div class="lowerborder measureDetailTable">
+      <table class="patientDemo main">
+        <tbody>
+          <tr>
+            <td>
+              <dl>
+                <dt>dob</dt>
+                <dd><%= display_time(@patient.birthdate) %></dd>
+              </dl>
+              <dl>
+                <dt>sex</dt>
+                <dd><%= @patient.gender %></dd>
+              </dl>
+              <dl>
+                <dt>race</dt>
+                <dd><%= Race.from_code(@patient.race['code']).first.name %></dd>
+              </dl>
+              <dl>
+                <dt>ethnicity</dt>
+                <dd><%= Ethnicity.from_code(@patient.ethnicity['code']).first.name %></dd>
+              </dl>
+              <dl>
+                <dt>languages</dt>
+                <dd><%= @patient.language_names.join %></dd>
+              </dl>
+            </td>
+            <td class="DemosecondRow">
+              <dl>
+                <dt>record number</dt>
+                <dd><%= @patient.medical_record_number %></dd>
+              </dl>
+              <dl>
+                <dt>Providers</dt>
+                <dd>
+									<ul>
+									<% @patient.providers.each do |pv| %>
+										<li><%= pv.full_name%></li>
+									<% end %>
+									</ul>
+								</dd>
+              </dl>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="patientRecords" class="main">
+      <table class="patientRecords">
+        <tr>
+          <td>
+            <table class="headerRow">
+              <%= render :partial => 'section', :object => @patient.allergies, :locals => {:title => 'Allergies'} %>
+              <%= render :partial => 'section', :object => @patient.care_goals, :locals => {:title => 'Care Goals'} %>
+              <%= render :partial => 'section', :object => @patient.vital_signs, :locals => {:title => 'Vital Signs'} %>
+              <%= render :partial => 'section', :object => @patient.results, :locals => {:title => 'Laboratory Results'} %>
+              <%= render :partial => 'section', :object => @patient.encounters, :locals => {:title => 'Encounters'} %>
+              <%= render :partial => 'section', :object => @patient.conditions, :locals => {:title => 'Conditions'} %>
+            </table>
+          </td>
+          <td>
+            <table class="headerRow secondRow"> 
+              <%= render :partial => 'section', :object => @patient.procedures, :locals => {:title => 'Procedures'} %>
+              <%= render :partial => 'section', :object => @patient.medications, :locals => {:title => 'Medications'} %>
+              <%= render :partial => 'section', :object => @patient.social_history, :locals => {:title => 'Social History'} %>
+              <%= render :partial => 'section', :object => @patient.immunizations, :locals => {:title => 'Immunizations'} %>
+              <%= render :partial => 'section', :object => @patient.medical_equipment, :locals => {:title => 'Medical Equipment'} %>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
