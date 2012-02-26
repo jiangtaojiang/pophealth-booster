@@ -54,4 +54,23 @@ class ApplicationController < ActionController::Base
   def calc_start(date)
     3.months.ago(Time.at(date))
   end
+
+  ######booster###########
+  
+  def set_current_patient
+    if session[:current_patient_id]
+      begin
+        @current_patient = Patient.find(session[:current_patient_id])
+        if(@current_patient)
+          @current_patient_name = @current_patient.firstname+" "+@current_patient.lastname
+        end
+      rescue
+        puts "can't find "+ session[:current_patient_id].to_s
+        @current_patient = nil
+      end
+    else
+      @current_patient = nil
+    end
+  end
+
 end

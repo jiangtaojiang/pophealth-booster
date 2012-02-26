@@ -1,0 +1,42 @@
+<div id="dashboardContainer">
+  <div id="pageContent">
+    <%= render 'layouts/form_menu' %>
+    <div id="equityMain">
+      <div class="equityTable">
+
+<h1>Find Patients</h1>
+<h5><%= flash[:notice] %></h5>
+<div align="center">
+  <%= form_tag("/eqpatients/find", :method => "post") do %>
+    <%= label_tag(:q, "Find by first name, last name, or member id:") %>
+    <%= text_field_tag(:q, @q) %>
+    <%= submit_tag("Go") %>
+  <% end %>
+</div>
+<table id="patientTable">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Member ID</th>
+    <th>Action</th>
+  </tr>
+  <% @patients.each do |patient| %>
+  <tr>
+    <td><%= link_to patient.firstname, show_patient_path(patient) %></td>
+    <td><%= link_to patient.lastname, show_patient_path(patient) %></td>
+    <td><%= link_to patient.member_id, show_patient_path(patient) %></td>
+    <td>
+      <%= link_to 'Health Conditions', show_patient_path(patient) %>,&nbsp;
+      <%= link_to 'Health Profile', edit_patient_profile_path(patient) %>,&nbsp;
+      <%= link_to 'Edit', edit_patient_path(patient) %>,&nbsp;
+      <%= link_to 'Remove', delete_patient_path(patient), :confirm => 'Are you sure?', :method=>:delete  %>
+    </td>
+  </tr>
+  <% end %>
+  <tr><th colspan="=4"></th></tr>
+</table>
+
+      </div><!-- end #equityTable -->
+    </div><!-- end #equityMain -->
+  </div><!-- end #pageContent -->
+</div><!-- end #container -->

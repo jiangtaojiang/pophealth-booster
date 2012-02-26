@@ -1,0 +1,29 @@
+<div id="dashboardContainer">
+  <div id="pageContent">
+    <%= render 'layouts/form_menu' %>
+    <div id="equityMain">
+      <div class="equityTable">
+
+<h1>Edit Patient Condition</h1>
+<h2><%=@eqcondition.name %> [<%= @eqcondition.code %>]</h2>
+<h2 align="right"><%=@patient.firstname %> <%=@patient.lastname %></h2>
+<h2 align="right">Member ID: <%=@patient.member_id %></h2>
+<h5><%= flash[:notice] %></h5>
+<table id="patientTable">
+  <%= form_tag("/conditions/"+@patient[:_id].to_s+"/"+@eqcondition.code+"/update", :method => :post) do %>
+    <tr>
+      <td><%= @eqcondition.name %></td>
+      <td><%= @eqcondition.code %></td>
+    </tr>
+    <tr>
+      <td>  </td>
+      <td><%= submit_tag("Save") %>  </td>
+    </tr>
+  <% end %>
+</table>
+<div align="right"><%= link_to "[remove this condition]", remove_condition_path(@patient.id, @eqcondition.id) %></div>
+      </div><!-- end #measureDetailTable -->
+    </div><!-- end #dashboardPeriod -->
+  </div><!-- end #pageContent -->
+</div><!-- end #container -->
+

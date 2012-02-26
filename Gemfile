@@ -19,7 +19,8 @@ gem 'json', :platforms => :jruby
 # these are all tied to 1.3.1 because bson 1.4.1 was yanked.  To get bundler to be happy we need to force 1.3.1 to cause the downgrade
 gem "mongo", "1.3.1"
 gem "bson", "1.3.1"
-gem 'bson_ext',"1.3.1",  :platforms => :mri
+gem 'bson_ext',"1.3.1"
+#gem 'bson_ext',"1.3.1",  :platforms => :mri
 gem "mongoid"
 gem 'devise'
 gem 'foreman'

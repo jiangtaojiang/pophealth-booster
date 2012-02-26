@@ -1,0 +1,50 @@
+<div id="dashboardContainer">
+  <div id="pageContent">
+    <%= render 'layouts/form_menu' %>
+    <div id="equityMain">
+      <div class="equityTable">
+
+<h1>Patient Health Conditons</h1>
+<h2 align="right"><%=@patient.firstname %> <%=@patient.lastname %></h2>
+<h2 align="right">Member ID: <%=@patient.member_id %></h2>
+<h5><%= notice %></h5>
+<table id="conditionTable">
+  <tr>
+    <th>Your Conditions</th>
+    <th>Alerts and Next Steps</th>
+  </tr>
+<% if @patient.eqconditions.length == 0 %>
+  <tr><td colspan="2">
+    Please fill out the patient <%= link_to "Health Profile", edit_patient_profile_path(@patient) %> to check if there is any condition requiring attention.<br />
+    or<br />
+    <%= link_to 'Add a Known Medical Condition', new_condition_path(@patient) %> to see the next step or alert according to medical guidelines.
+  </td></tr>
+<% else %>
+  <% @patient.eqconditions.each do |c| %>
+  <tr>
+    <td>
+     <%= link_to c.name, edit_condition_url(@patient.id, c.id) %>
+    </td>
+    <td>
+    <% if c.alert_test %>
+      ***ALERT: <%=c.alert_test %>***<br />
+    <% end %>
+    <% if c.alert_vaccine %>
+      ***ALERT: <%=c.alert_vaccine %>***<br />
+    <% end %>
+    <% if c.alert_monitor %>
+      ***ALERT: <%=c.alert_monitor %>***<br />
+    <% end %>
+    <% if c.alert_treatment %>
+      ***ALERT: <%=c.alert_treatment %>***<br />
+    <% end %>
+    </td>
+  </tr>
+  <tr><th colspan="=2"></th></tr>
+  <%end%>
+<% end %>
+</table>
+      </div><!-- end #equityTable -->
+    </div><!-- end #equityMain -->
+  </div><!-- end #pageContent -->
+</div><!-- end #container -->

@@ -1,0 +1,24 @@
+<div id="dashboardContainer">
+  <div id="pageContent">
+    <%= render 'layouts/form_menu' %>
+    <div id="equityMain">
+      <div class="equityTable">
+
+<h1>Health Equity Booster Help</h1>
+<h5><%= flash[:notice] %></h5>
+<br />
+<h2>Frequently Asked Questions:</h2>
+<br />
+<% HELP_LINES.each do |line| %>
+  <% if(line.start_with?("Q:")) %>
+   <h3><%=line%><br /></h3>
+  <%else%>
+   <h7><%=line%><br /></h7>
+  <%end%>
+<%end %>
+<br />
+
+      </div><!-- end #equityTable -->
+    </div><!-- end #equityMain -->
+  </div><!-- end #pageContent -->
+</div><!-- end #container -->

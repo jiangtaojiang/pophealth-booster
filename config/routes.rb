@@ -36,6 +36,53 @@ PopHealth::Application.routes.draw do
   
   root :to => 'measures#index'
   
+#####booster#############
+
+  match 'admin/patients' => 'admin#admin_patients', :as => :admin_patients, :via => :get
+  match 'admin/patients/random' => 'admin#randomize_patients', :as => :randomize_patients, :via => :get
+  match 'admin/patients/random/hbv' => 'admin#randomize_hbvs', :as => :randomize_hbvs, :via => :get
+  match 'admin/patients/random/hcv' => 'admin#randomize_hcvs', :as => :randomize_hcvs, :via => :get
+  match 'admin/patients/clear' => 'admin#clear_patients', :as => :clear_patients, :via => :get
+
+    match 'equity', :to => 'equity#index', :as => :report_equity, :via => :get
+    match 'equity/:cdn_id/:eqm_id', :to => 'equity#show_patients', :as => :show_equity_patients, :via => :get
+    match 'equity/help', :to => 'equity#help', :as => :equity_help, :via => :get
+    match 'equity/demo', :to => 'equity#demo', :as => :equity_demo, :via => :get
+  
+    match 'eqpatients', :to => 'eqpatients#index', :as => :list_patients, :via => :get
+    match 'eqpatients/find', :to => 'eqpatients#index', :as => :find_patients, :via => :post
+    match 'eqpatients/new', :to => 'eqpatients#new', :as => :new_patient, :via => :get
+    match 'eqpatients/create', :to => 'eqpatients#create', :as => :create_patient, :via => :post
+    match 'eqpatients/:id' => 'eqpatients#show', :as => :show_patient, :via => :get
+    match 'eqpatients/:id/edit' => 'eqpatients#edit', :as => :edit_patient, :via => :get
+    match 'eqpatients/:id/update' => 'eqpatients#update', :as => :update_patient, :via => :post
+    match 'eqpatients/:id/delete', :to => 'eqpatients#destroy', :as => :delete_patient, :via => :get
+  
+    match 'profiles/:id/edit' => 'profiles#edit', :as => :edit_patient_profile, :via => :get
+    match 'profiles/:id/update' => 'profiles#update', :as => :update_patient_profile, :via => :post
+  
+    match 'conditions/:id/new' => 'eqconditions#new', :as => :new_condition, :via => :get
+    match 'conditions/:id/create' => 'eqconditions#create', :as => :create_condition, :via => :post
+    match 'conditions/edit/:id/:cdn_id' => 'eqconditions#edit', :as => :edit_condition, :via => :get
+    match 'conditions/update/:id/:cdn_id' => 'eqconditions#update', :as => :update_condition, :via => :post
+    match 'conditions/remove/:id/:cdn_id' => 'eqconditions#destroy', :as => :remove_condition, :via => :get
+  
+    match 'conditions/vaccine/add/:id/:cdn_id' => 'eqconditions#add_vaccine', :as => :add_condition_vaccine, :via => :post
+    match 'conditions/vaccine/remove/:id/:cdn_id/:vac_id' => 'eqconditions#remove_vaccine', :as => :remove_condition_vaccine, :via => :get
+  
+    match 'conditions/treatment/add/:id/:cdn_id' => 'eqconditions#add_treatment', :as => :add_condition_treatment, :via => :post
+    #match 'conditions/treatment/update/:id/:cdn_id/:tr_id' => 'eqconditions#update_treatment', :as => :update_condition_treatment, :via => :post
+    match 'conditions/treatment/remove/:id/:cdn_id/:tr_id' => 'eqconditions#remove_treatment', :as => :remove_condition_treatment, :via => :get
+  
+    match 'conditions/hbv/update/:id/:cdn_id' => 'hbvs#update', :as => :update_hbv, :via => :post
+    match 'conditions/hbv/monitor/add/:id/:cdn_id' => 'hbvs#add_test', :as => :add_hbv_test, :via => :post
+    match 'conditions/hbv/monitor/update/:id/:cdn_id/:dx_id' => 'hbvs#update_test', :as => :update_hbv_test, :via => :post
+    match 'conditions/hbv/monitor/remove/:id/:cdn_id/:dx_id' => 'hbvs#remove_test', :as => :remove_hbv_test, :via => :get
+  
+    match 'conditions/hcv/update/:id/:cdn_id' => 'hcvs#update', :as => :update_hcv, :via => :post 
+ 
+#####end booster##############  
+  
   resources :measures do
     member { get :providers }
   end

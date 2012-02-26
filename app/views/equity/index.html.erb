@@ -1,0 +1,35 @@
+<div id="dashboardContainer">
+  <div id="pageContent">
+    <%= render 'layouts/form_menu' %>
+    <div id="equityMain">
+      <div class="equityTable">
+
+<h1>Equity Reports</h1>
+<h5><%= flash[:notice] %></h5>
+<table id="patientTable">
+  <tr>
+    <th>Measure</th>
+    <th>Expected</th>
+    <th>Actual</th>
+    <th>Equity</th>
+    <th>Patients</th>
+  </tr>
+  <% @reports.each do |condition, report| %>
+    <tr><th colspan="=5"><%=condition %></th></tr>
+    <% report.each do |equity| %>
+      <tr>
+        <td><%= equity.measure_name %></td>
+        <td><%= equity.expected_count %></td>
+        <td><%= equity.actual_count %></td>
+        <td><%= number_to_percentage(equity.percentage, :precision=>1) %></td>
+        <td><%=link_to 'list patients', show_equity_patients_url(condition, equity.measure_code) %></td>
+      </tr>
+    <% end %>
+  <% end %>
+  <tr><th colspan="=5"></th></tr>
+</table>
+
+      </div><!-- end #equityTable -->
+    </div><!-- end #equityMain -->
+  </div><!-- end #pageContent -->
+</div><!-- end #container -->

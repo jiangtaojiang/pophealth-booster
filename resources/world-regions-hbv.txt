@@ -1,0 +1,239 @@
+Antarctica - Region	Antarctica	AQ		
+Central Africa - Region	Angola	AO	2	8
+Central Africa - Region	Cameroon	CM	2	8
+Central Africa - Region	Central African Republic	CF	2	8
+Central Africa - Region	Chad	TD	2	8
+Central Africa - Region	Congo, Republic of the	CG	2	8
+Central Africa - Region	Democratic Republic of the Congo	CD	2	8
+Central Africa - Region	Equatorial Guinea	GQ	2	8
+Central Africa - Region	Gabon	GA	2	8
+Central Africa - Region	South Sudan		2	8
+Central Africa - Region	Sudan	SD	2	8
+Central Africa - Region	Zambia	ZM	2	8
+East Africa - Region	Burundi	BI	2	8
+East Africa - Region	Djibouti	DJ	2	8
+East Africa - Region	Eritrea	ER	2	8
+East Africa - Region	Ethiopia	ET	2	8
+East Africa - Region	Kenya	KE	2	8
+East Africa - Region	Malawi	MW	2	8
+East Africa - Region	Mozambique	MZ	2	8
+East Africa - Region	Reunion	RE	2	8
+East Africa - Region	Rwanda	RW	2	8
+East Africa - Region	Somalia	SO	2	8
+East Africa - Region	Tanzania	TZ	2	8
+East Africa - Region	Uganda	UG	2	8
+East Asia - Region	China	CN	2	8
+East Asia - Region	Hong Kong SAR (China)	HK	2	8
+East Asia - Region	Japan	JP	2	8
+East Asia - Region	Macau SAR (China)	MO	2	8
+East Asia - Region	Mongolia	MN	2	8
+East Asia - Region	North Korea	KR	2	8
+East Asia - Region	South Korea	KP	2	8
+East Asia - Region	Taiwan	TW	2	8
+Eastern Europe and Northern Asia - Region	Hungary	HU		
+Eastern Europe and Northern Asia - Region	Albania	AL	2	
+Eastern Europe and Northern Asia - Region	Armenia	AM	2	
+Eastern Europe and Northern Asia - Region	Azerbaijan	AZ	2	
+Eastern Europe and Northern Asia - Region	Belarus	BY	2	
+Eastern Europe and Northern Asia - Region	Bosnia and Herzegovina	BA	2	
+Eastern Europe and Northern Asia - Region	Bulgaria	BG	2	
+Eastern Europe and Northern Asia - Region	Croatia	HR	2	
+Eastern Europe and Northern Asia - Region	Czech Republic	CZ	2	
+Eastern Europe and Northern Asia - Region	Estonia	EE	2	
+Eastern Europe and Northern Asia - Region	Georgia	GE	2	
+Eastern Europe and Northern Asia - Region	Kazakhstan	KZ	2	
+Eastern Europe and Northern Asia - Region	Kosovo	XK	2	
+Eastern Europe and Northern Asia - Region	Kyrgyzstan	KG	2	
+Eastern Europe and Northern Asia - Region	Latvia	LV	2	
+Eastern Europe and Northern Asia - Region	Lithuania	LT	2	
+Eastern Europe and Northern Asia - Region	Macedonia	MK	2	
+Eastern Europe and Northern Asia - Region	Moldova	MD	2	
+Eastern Europe and Northern Asia - Region	Montenegro	ME	2	
+Eastern Europe and Northern Asia - Region	Poland	PL	2	
+Eastern Europe and Northern Asia - Region	Romania	RO	2	
+Eastern Europe and Northern Asia - Region	Russia	RU	2	
+Eastern Europe and Northern Asia - Region	Serbia	RS	2	
+Eastern Europe and Northern Asia - Region	Slovakia	SK	2	
+Eastern Europe and Northern Asia - Region	Slovenia	SI	2	
+Eastern Europe and Northern Asia - Region	Tajikistan	TJ	2	
+Eastern Europe and Northern Asia - Region	Turkmenistan	TM	2	
+Eastern Europe and Northern Asia - Region	Ukraine	UA	2	
+Eastern Europe and Northern Asia - Region	Uzbekistan	UZ	2	
+Mexico and Central America - Region	Costa Rica	CR		
+Mexico and Central America - Region	El Salvador	SV		
+Mexico and Central America - Region	Belize	BZ	2	
+Mexico and Central America - Region	Guatemala	GT	2	
+Mexico and Central America - Region	Honduras	HN	2	
+Mexico and Central America - Region	Panama	PA	2	
+Mexico and Central America - Region	Mexico	MX		
+Mexico and Central America - Region	Nicaragua	NI		
+North Africa - Region	Algeria	DZ	2	8
+North Africa - Region	Egypt	EG	2	8
+North Africa - Region	Libya	LY	2	8
+North Africa - Region	Morocco	MA	2	8
+North Africa - Region	Tunisia	TN	2	8
+North Africa - Region	Western Sahara	EH	2	8
+North America - Region	Canada	CA		
+North America - Region	Saint Pierre and Miquelon (France)	PM		
+North America - Region	United States	US		
+South Asia - Region	Afghanistan	AF	2	8
+South Asia - Region	Bangladesh	BD	2	8
+South Asia - Region	Bhutan	BT	2	8
+South Asia - Region	India	IN	2	8
+South Asia - Region	Maldives	MV	2	8
+South Asia - Region	Nepal	NP	2	8
+South Asia - Region	Pakistan	PK	2	8
+South Asia - Region	Sri Lanka	LK	2	8
+Southeast Asia - Region	Brunei	BN	2	8
+Southeast Asia - Region	Burma (Myanmar)	MM	2	8
+Southeast Asia - Region	Cambodia	KH	2	8
+Southeast Asia - Region	Indonesia	ID	2	8
+Southeast Asia - Region	Laos	LA	2	8
+Southeast Asia - Region	Malaysia	MY	2	8
+Southeast Asia - Region	Philippines	PH	2	8
+Southeast Asia - Region	Singapore	SG	2	8
+Southeast Asia - Region	Thailand	TH	2	8
+Southeast Asia - Region	Timor-Leste (East Timor)		2	8
+Southeast Asia - Region	Vietnam	VN	2	8
+Southern Africa - Region	Botswana	BW	2	8
+Southern Africa - Region	Lesotho	LS	2	8
+Southern Africa - Region	Namibia	NA	2	8
+Southern Africa - Region	South Africa	ZA	2	8
+Southern Africa - Region	Swaziland	SZ	2	8
+Southern Africa - Region	Zimbabwe	ZW	2	8
+Southern and Western Pacific - Region	American Samoa	AS	2	
+Southern and Western Pacific - Region	Christmas Island (Australia)	CX	2	
+Southern and Western Pacific - Region	Cocos (Keeling) Islands (Australia)	CC	2	
+Southern and Western Pacific - Region	Cook Islands (New Zealand)	CK	2	
+Southern and Western Pacific - Region	Fiji	FJ	2	
+Southern and Western Pacific - Region	French Polynesia (France)	PF	2	
+Southern and Western Pacific - Region	Guam (U.S.)	GU	2	
+Southern and Western Pacific - Region	Kiribati	KI	2	
+Southern and Western Pacific - Region	Marshall Islands	MH	2	
+Southern and Western Pacific - Region	Micronesia, Federated States of	FM	2	
+Southern and Western Pacific - Region	Nauru	NR	2	
+Southern and Western Pacific - Region	New Caledonia (France)	NC	2	
+Southern and Western Pacific - Region	Niue (New Zealand)	NU	2	
+Southern and Western Pacific - Region	Norfolk Island (Australia)	NF	2	
+Southern and Western Pacific - Region	Northern Mariana Islands (U.S.)	MP	2	
+Southern and Western Pacific - Region	Palau	PW	2	
+Southern and Western Pacific - Region	Papua New Guinea	PG	2	
+Southern and Western Pacific - Region	Pitcairn Islands (U.K.)	PN	2	
+Southern and Western Pacific - Region	Samoa	WS	2	
+Southern and Western Pacific - Region	Solomon Islands	SB	2	
+Southern and Western Pacific - Region	Tokelau (New Zealand)	TK	2	
+Southern and Western Pacific - Region	Tonga	TO	2	
+Southern and Western Pacific - Region	Tuvalu	TV	2	
+Southern and Western Pacific - Region	UNITED STATES MINOR OUTLYING ISLANDS	UM	2	
+Southern and Western Pacific - Region	Vanuatu	VU	2	
+Southern and Western Pacific - Region	Australia	AU		
+Southern and Western Pacific - Region	New Zealand	NZ		
+Temperate South America - Region	Argentina	AR	2	
+Temperate South America - Region	Chile	CL		
+Temperate South America - Region	Easter Island (Chile)	TP		
+Temperate South America - Region	Falkland Islands (U.K.)	FK		
+Temperate South America - Region	Uruguay	UY		
+the Caribbean - Region	Antigua and Barbuda	AG	2	
+the Caribbean - Region	Dominica	DM	2	
+the Caribbean - Region	Dominican Republic	DO	2	
+the Caribbean - Region	Grenada	GD	2	
+the Caribbean - Region	Haiti	HT	2	
+the Caribbean - Region	Jamaica	JM	2	
+the Caribbean - Region	Puerto Rico (U.S.)	PR	2	
+the Caribbean - Region	Saint Kitts and Nevis	KN	2	
+the Caribbean - Region	Saint Lucia	LC	2	
+the Caribbean - Region	Saint Vincent and the Grenadines		2	
+the Caribbean - Region	Trinidad and Tobago	TT	2	
+the Caribbean - Region	Turks and Caicos Islands (U.K.)	TC	2	
+the Caribbean - Region	Anguilla (U.K.)	AI		
+the Caribbean - Region	Aruba	AW		
+the Caribbean - Region	Bahamas, The	BS		
+the Caribbean - Region	Barbados	BB		
+the Caribbean - Region	Bermuda (U.K.)	BM		
+the Caribbean - Region	Cayman Islands (U.K.)	KY		
+the Caribbean - Region	Cuba	CU		
+the Caribbean - Region	Guadeloupe	GP		
+the Caribbean - Region	Martinique (France)	MQ		
+the Caribbean - Region	Montserrat (U.K.)	MS		
+the Caribbean - Region	Netherlands Antilles	AN		
+the Caribbean - Region	Virgin Islands, British	VG		
+the Caribbean - Region	Virgin Islands, U.S.	VI		
+the Indian Ocean Islands - Region	Comoros	KM	2	
+the Indian Ocean Islands - Region	Madagascar	MG	2	
+the Indian Ocean Islands - Region	Mauritius	MU	2	
+the Indian Ocean Islands - Region	Seychelles	SC	2	
+the Indian Ocean Islands - Region	British Indian Ocean Territory (U.K.)	IO		
+the Indian Ocean Islands - Region	Mayotte (France)	YT		
+the Indian Ocean Islands - Region	Reunion (France)			
+the Middle East - Region	Bahrain	BH	2	
+the Middle East - Region	Iran	IR	2	
+the Middle East - Region	Iraq	IQ	2	
+the Middle East - Region	Jordan	JO	2	
+the Middle East - Region	Kuwait	KW	2	
+the Middle East - Region	Lebanon	LB	2	
+the Middle East - Region	Oman	OM	2	
+the Middle East - Region	Qatar	QA	2	
+the Middle East - Region	Saudi Arabia	SA	2	
+the Middle East - Region	Syria	SY	2	
+the Middle East - Region	Turkey	TR	2	
+the Middle East - Region	United Arab Emirates	AE	2	
+the Middle East - Region	Yemen	YE	2	
+the Middle East - Region	Cyprus	CY		
+the Middle East - Region	Israel	IL		
+Tropical South America - Region	French Guiana (France)	GF		
+Tropical South America - Region	Bolivia	BO	2	
+Tropical South America - Region	Brazil	BR	2	
+Tropical South America - Region	Colombia	CO	2	
+Tropical South America - Region	Ecuador	EC	2	
+Tropical South America - Region	Guyana	GY	2	
+Tropical South America - Region	Suriname	SR	2	
+Tropical South America - Region	Venezuela	VE	2	
+Tropical South America - Region	Paraguay	PY		
+Tropical South America - Region	Peru	PE		
+West Africa - Region	Benin	BJ	2	8
+West Africa - Region	Burkina Faso	BF	2	8
+West Africa - Region	Cape Verde	CV	2	8
+West Africa - Region	Cote d'Ivoire	CI	2	8
+West Africa - Region	Gambia, The	GM	2	8
+West Africa - Region	Ghana	GH	2	8
+West Africa - Region	Guinea	GN	2	8
+West Africa - Region	Guinea-Bissau	GW	2	8
+West Africa - Region	Liberia	LR	2	8
+West Africa - Region	Mali	ML	2	8
+West Africa - Region	Mauritania	MR	2	8
+West Africa - Region	Niger	NE	2	8
+West Africa - Region	Nigeria	NG	2	8
+West Africa - Region	Sao Tome and Principe	ST	2	8
+West Africa - Region	Senegal	SN	2	8
+West Africa - Region	Sierra Leone	SL	2	8
+West Africa - Region	Togo	TG	2	8
+Western Europe - Region	Canary Islands (Spain)		2	
+Western Europe - Region	Greece	GR	2	
+Western Europe - Region	Italy	IT	2	
+Western Europe - Region	Malta	MT	2	
+Western Europe - Region	Portugal	PT	2	
+Western Europe - Region	Spain	ES	2	
+Western Europe - Region	Andorra	AD		
+Western Europe - Region	Austria	AT		
+Western Europe - Region	Azores (Portugal)			
+Western Europe - Region	Belgium	BE		
+Western Europe - Region	Denmark	DK		
+Western Europe - Region	Faroe Islands (Denmark)	FO		
+Western Europe - Region	Finland	FI		
+Western Europe - Region	France	FR		
+Western Europe - Region	Germany	DE		
+Western Europe - Region	Gibraltar (U.K.)	GI		
+Western Europe - Region	Greenland (Denmark)	GL		
+Western Europe - Region	Holy See	HM		
+Western Europe - Region	Iceland	IS		
+Western Europe - Region	Ireland	IE		
+Western Europe - Region	Liechtenstein	LI		
+Western Europe - Region	Luxembourg	LU		
+Western Europe - Region	Madeira Islands (Portugal)			
+Western Europe - Region	Monaco	MC		
+Western Europe - Region	Netherlands, The	NL		
+Western Europe - Region	Norway	NO		
+Western Europe - Region	San Marino	SM		
+Western Europe - Region	Sweden	SE		
+Western Europe - Region	Switzerland	CH		
+Western Europe - Region	United Kingdom	GB		

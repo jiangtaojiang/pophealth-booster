@@ -1,0 +1,41 @@
+<div id="dashboardContainer">
+  <div id="pageContent">
+    <%= render 'layouts/form_menu' %>
+    <div id="equityMain">
+      <div class="equityTable">
+
+<h1>Patients Related to Equity Measure</h1>
+<h2><%=@equity.measure_name%></h2>
+<h2>Expected: <%=@equity.expected_count%> Actual: <%=@equity.actual_count %></h2>
+<h5><%= flash[:notice] %></h5>
+<table id="patientTable">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Member ID</th>
+    <th>Meet Guideline?</th>
+    <th>Links</th>
+  </tr>
+  <% @patients.each do |patient| %>
+  <tr>
+    <td><%= patient.firstname %></td>
+    <td><%= patient.lastname %></td>
+    <td><%= patient.member_id %></td>
+    <%if patient.eqmeasure_meet_gl %>
+      <td>Yes</td>
+    <% else %>
+      <td bgcolor="orange">No</td>
+    <% end %>
+    <td>
+      <%= link_to 'Health Conditions', show_patient_path(patient) %>,&nbsp;
+      <%= link_to 'Health Profile', edit_patient_profile_path(patient) %>&nbsp;
+    </td>
+  </tr>
+  <% end %>
+  <tr><th colspan="=5"></th></tr>
+</table>
+
+      </div><!-- end #equityTable -->
+    </div><!-- end #equityMain -->
+  </div><!-- end #pageContent -->
+</div><!-- end #container -->

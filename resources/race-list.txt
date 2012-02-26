@@ -1,0 +1,8 @@
+1	White
+2	Black or African American
+3	American Indian and Alaska Native
+4	Native Hawaiian and Pacific Islander
+5	Asian
+6	Hispanic and Latino
+7	Other Race
+8	Mixed Race

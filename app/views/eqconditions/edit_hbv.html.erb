@@ -1,0 +1,215 @@
+<div id="dashboardContainer">
+  <div id="pageContent">
+    <%= render 'layouts/form_menu' %>
+    <div id="equityMain">
+      <div class="equityTable">
+
+<h1>Edit Patient Condition</h1>
+<h2><%=@eqcondition.name %> </h2>
+<h2 align="right"><%=@patient.firstname %> <%=@patient.lastname %></h2>
+<h2 align="right">Member ID: <%=@patient.member_id %></h2>
+<h5><%= flash[:notice] %><br />
+  <% @hbv.errors.full_messages.each do |msg| %>
+  - <%= msg %><br />
+  <% end %>
+</h5>
+<% if @guidelines.length > 0 %>
+<table id="conditionTable" >
+   <tr>
+     <th colspan="2">Risk: You are at risk for HBV infection!</th>
+   </tr>
+  <% @guidelines.each do |g| %>
+  <tr>
+    <td width="20">CDC Guideline: </td>
+    <td>Population: <%=g.cause %><br />
+       Testing: <%=g.test_rec %> <br />
+       Vaccination/Follow-up: <%=g.treat_rec %>
+     </td>
+   </tr>
+    <tr><th colspan="2">  </th></tr>
+  <% end %>
+</table>
+<% end %>
+<table id="conditionTable" >
+  <% if @test_alert %>
+    <caption>***ALERT: <%=@test_alert %>***</caption>
+  <% end %>
+  <tr>
+    <th colspan="2">Tests: <%= @test_status %> </th>
+  </tr>
+  <%= form_tag("/conditions/hbv/update/"+@patient.id.to_s+"/"+@eqcondition.id.to_s, :method => :post) do %>
+  <tr>
+    <td >HBsAg:</td>
+    <td>
+      <%= check_box(:hbv, :hbs_ag_pos, {}, true, false) %> Postive
+      <%= check_box(:hbv, :hbs_ag_neg, {}, true, false) %> Negative
+      &nbsp;Date: <%= text_field(:hbv, :hbs_ag_date, :size => 10) %>
+    </td>
+  </tr>
+  <tr>
+    <td>Anti-HBc:</td>
+    <td>
+      <%= check_box(:hbv, :anti_hbc_pos, {}, true, false) %> Postive
+      <%= check_box(:hbv, :anti_hbc_neg, {}, true, false) %> Negative
+      &nbsp;Date: <%= text_field(:hbv, :anti_hbc_date, :size => 10) %>
+    </td>
+  </tr>
+  <tr>
+    <td >IgM Anti-HBc:</td>
+    <td>
+      <%= check_box(:hbv, :igm_anti_hbc_pos, {}, true, false) %> Postive
+      <%= check_box(:hbv, :igm_anti_hbc_neg, {}, true, false) %> Negative
+      &nbsp;Date: <%= text_field(:hbv, :igm_anti_hbc_date, :size => 10) %>
+    </td>
+  </tr>
+  <tr>
+      <td>Anti-HBs:</td>
+      <td>
+        <%= check_box(:hbv, :anti_hbs_pos, {}, true, false) %> Postive
+        <%= check_box(:hbv, :anti_hbs_neg, {}, true, false) %> Negative
+        &nbsp;Date: <%= text_field(:hbv, :anti_hbs_date, :size => 10) %>
+      </td>
+  </tr>
+  <tr><th colspan="2">  </th></tr>
+  <tr><td></td>
+    <td><%= submit_tag("Save") %>  </td>
+  </tr>
+  <% end %>
+</table>
+<table id="conditionTable" >
+  <% if @hav_vaccine_alert %>
+    <caption>***ALERT: <%=@hav_vaccine_alert %>***</caption>
+  <% end %>
+  <% if @hbv_vaccine_alert %>
+    <caption>***ALERT: <%=@hbv_vaccine_alert %>***</caption>
+  <% end %>
+  <tr>
+    <th colspan="6">Vaccine History:    </th>
+  </tr>
+  <tr>
+    <td>Target</td>
+    <td>Vaccine</td>
+    <td>Order</td>
+    <td>Date</td>
+    <td>Clinic</td>
+    <td></td>
+  </tr>
+  <% @eqcondition.eqvaccines.each do |vac| %>
+    <tr>
+      <td><%= vac.targetcon %></td>
+      <td><%= vac.vaccine %></td>
+      <td><%= vac.order %></td>
+      <td><%= vac.date %></td>
+      <td><%= vac.clinic %></td>
+      <td><%= link_to "[remove]", remove_condition_vaccine_path(@patient.id, @eqcondition.id, vac.id) %></td>
+    </tr>
+  <% end %>
+  <% @eqcondition.eqvaccines.new do |vac| %>
+    <%= form_tag("/conditions/vaccine/add/"+@patient.id.to_s+"/"+@eqcondition.id.to_s, :method => :post) do %>
+    <tr>
+      <td>HBV </td>
+      <td><%= text_field(:vac, :vaccine) %></td>
+      <td><%= text_field(:vac, :order, :size => 10) %></td>
+      <td><%= text_field(:vac, :date, :size => 10) %></td>
+      <td><%= text_field(:vac, :clinic) %></td>
+      <td><%= submit_tag("Add") %>
+        <input type="hidden" name="vac[targetcon]" value="hbv" />
+      </td>
+    </tr>
+    <% end %>
+    <%= form_tag("/conditions/vaccine/add/"+@patient.id.to_s+"/"+@eqcondition.id.to_s, :method => :post) do %>
+    <tr>
+      <td>HAV </td>
+      <td><%= text_field(:vac, :vaccine) %></td>
+      <td><%= text_field(:vac, :order, :size => 10) %></td>
+      <td><%= text_field(:vac, :date, :size => 10) %></td>
+      <td><%= text_field(:vac, :clinic) %></td>
+      <td><%= submit_tag("Add") %>
+        <input type="hidden" name="vac[targetcon]" value="hav" />
+      </td>
+    </tr>
+    <% end %>
+  <% end %>
+</table>
+<table id="conditionTable" >
+  <tr>
+    <th colspan="5">Treatment History:</th>
+  </tr>
+  <tr>
+    <td>Medication Name</td>
+    <td>Start Date</td>
+    <td>End Date</td>
+    <td>Reason</td>
+    <td></td>
+  </tr>
+  <% @eqcondition.eqtreatments.each do |tr| %>
+    <tr>
+      <td><%= tr.medname %></td>
+      <td><%= tr.start %></td>
+      <td><%= tr.end %></td>
+      <td><%= tr.note %></td>
+      <td><%= link_to "[remove]", remove_condition_treatment_path(@patient.id, @eqcondition.id, tr.id) %></td>
+    </tr>
+  <% end %>
+  <% @eqcondition.eqtreatments.new do |tr| %>
+    <%= form_tag("/conditions/treatment/add/"+@patient.id.to_s+"/"+@eqcondition.id.to_s, :method => :post) do %>
+    <tr>
+      <td><%= text_field(:tr, :medname) %></td>
+      <td><%= text_field(:tr, :start, :size => 10) %></td>
+      <td><%= text_field(:tr, :end, :size => 10) %></td>
+      <td><%= text_field(:tr, :note) %></td>
+      <td><%= submit_tag("Add") %>  </td>
+    </tr>
+    <% end %>
+  <% end %>
+</table>
+<table id="conditionTable" >
+  <% if @monitoring_alert %>
+    <caption>***ALERT: <%=@monitoring_alert %>***</caption>
+  <% end %>
+  <tr>
+    <th colspan="8">Monitoring Test History:</th>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>AFP</td>
+    <td>Ultrsound</td>
+    <td>CT</td>
+    <td>ALT</td>
+    <td>HBV DNA</td>
+    <td>Other</td>
+    <td></td>
+  </tr>
+  <% @hbv.eqtests.each do |test| %>
+    <tr>
+      <td><%= test.date %></td>
+      <td><%= test.afp %></td>
+      <td><%= test.ultrasound %></td>
+      <td><%= test.ct %></td>
+      <td><%= test.alt %></td>
+      <td><%= test.hbv_dna %></td>
+      <td><%= test.other %></td>
+      <td><%= link_to "[remove]", remove_hbv_test_path(@patient.id, @eqcondition.id, test.id) %></td>
+    </tr>
+  <% end %>
+  <% @hbv.eqtests.new do |test| %>
+    <%= form_tag("/conditions/hbv/monitor/add/"+@patient.id.to_s+"/"+@eqcondition.id.to_s, :method => :post) do %>
+    <tr>
+      <td><%= text_field(:test, :date, :size => 10) %></td>
+      <td><%= text_field(:test, :afp, :size => 10) %></td>
+      <td><%= check_box(:test, :ultrasound, {}, true, false) %></td>
+      <td><%= check_box(:test, :ct, {}, true, false) %></td>
+      <td><%= text_field(:test, :alt, :size => 10) %></td>
+      <td><%= text_field(:test, :hbv_dna, :size => 10) %></td>
+      <td><%= text_field(:test, :other) %></td>
+      <td><%= submit_tag("Add") %>  </td>
+    </tr>
+    <% end %>
+  <% end %>
+</table>
+<div align="right"><%= link_to "[remove this condition]", remove_condition_path(@patient.id, @eqcondition.id) %></div>
+      </div><!-- end #measureDetailTable -->
+    </div><!-- end #dashboardPeriod -->
+  </div><!-- end #pageContent -->
+</div><!-- end #container -->
+

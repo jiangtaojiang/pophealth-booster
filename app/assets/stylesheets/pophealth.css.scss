@@ -1217,3 +1217,70 @@ table#providerTable, table.measureTable  {
   border-radius: 15px;
   text-transform: lowercase;
 }
+
+
+
+
+#equityMain {
+  float: left;
+  padding-top: 10px;
+  min-width: 720px;
+}
+.equityTable {
+  padding: 0;
+  float: left;
+  width: 700px;
+}
+.equityTable h1 {
+  font-size: 1.5em;
+  padding-left: 25px;
+}
+.equityTable h2 {
+  font-size: 1.2em;
+  padding-left: 25px;
+}
+.equityTable h3 {
+  font-size: 1.2em;
+  color: #33aace;
+  padding-left: 25px;
+}
+.equityTable h5 {
+  font-size: 1em;
+  color: orange;
+  padding-left: 25px;
+}
+.equityTable h6 {
+  color: red;
+  padding-left: 25px;
+}
+.equityTable h7 {
+  color: #333333;
+  padding-left: 25px;
+}
+.equityTable a {
+  color: #33aace;
+}
+#conditionTable {
+  margin: 20px 20px 20px 50px;
+  width: 100%;
+}
+#conditionTable caption {
+  padding: 2px 5px;
+  color: red;
+  text-align: center;
+}
+#conditionTable th {
+  padding: 2px 5px;
+  color: #888888;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #cccccc;
+}
+#conditionTable td {
+  padding: 2px 15px 2px 5px;
+}
+#conditionTable a {
+  color: #33aace;
+}
+
+

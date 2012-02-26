@@ -1,0 +1,137 @@
+<div id="dashboardContainer">
+  <div id="pageContent">
+    <%= render 'layouts/form_menu' %>
+    <div id="equityMain">
+      <div class="equityTable">
+
+<h1>Edit Patient Health Profile</h1>
+<h2 align="right"><%=@patient.firstname %> <%=@patient.lastname %></h2>
+<h2 align="right">Member ID: <%=@patient.member_id %></h2>
+<h5>
+<% if @new_conditions %>
+  New conditions are detected:<br>
+  <% @new_conditions.each do |cid, cname| %>
+    &nbsp;&nbsp;- <%= link_to cname, edit_condition_url(@patient.id, cid) %><br />
+  <% end %>
+  Please enter test or treatment info on the condition tracking page to check for guideline-based recommendations.<br />
+<% end %>
+<% @patient.errors.full_messages.each do |msg| %>
+  - <%= msg %><br />
+<% end %>
+</h5>
+<table id="patientTable">
+  <%= form_tag("/profiles/"+@patient[:_id].to_s+"/update", :method => :post) do %>
+    <tr>
+      <th colspan="2" align="center">Personal information:</th>
+    </tr>
+    <tr>
+      <td align="right">Gender: </td>
+      <td><%= radio_button("profile", "gender", "Male") %>Male &nbsp;&nbsp; <%= radio_button("profile", "gender", "Female") %>Female </td>
+    </tr>
+    <tr>
+      <td align="right">Birthday: </td>
+      <td><%= text_field(:profile, :birthday, :size => 10)%> (yyyy/mm/dd)</td>
+    </tr>
+    <tr>
+      <td>Born country:</td>
+      <td><%= select("profile", "country_born", COUNTRY_OPTIONS) %></td>
+    </tr>
+    <tr>
+      <td>Race:</td>
+      <td><%= select("profile", "race", RACE_OPTIONS) %></td>
+    </tr>
+    <tr>
+      <td>Are you pregnant now?</td>
+      <td><%= check_box(:profile, :pregnant, {:checked => @profile.pregnant}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Are you an injection drug user?</td>
+      <td><%= check_box(:profile, :injection_drug_user, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Are you a men having sex with men?</td>
+      <td><%= check_box(:profile, :gay_man, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Do you have any close contact who is HBV positive?</td>
+      <td><%= check_box(:profile, :close_contacts_hbv, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <th colspan="2" align="center"><br>Family information:</th>
+    </tr>
+    <tr>
+      <td>Mother's born country:</td>
+      <td><%= select("profile", "mother_country_born", COUNTRY_OPTIONS) %> </td>
+    </tr>
+    <tr>
+      <td>Father's born country:</td>
+      <td><%= select("profile", "father_country_born", COUNTRY_OPTIONS) %></td>
+    </tr>
+    <tr>
+      <td>Mother HBV positive?</td>
+      <td><%= check_box(:profile, :mother_hbv, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Mother HCV positive?</td>
+      <td><%= check_box(:profile, :mother_hcv, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <th colspan="2" align="center"><br>Medical conditions:</th>
+    </tr>
+    <tr>
+      <td>Are you immunosuppressive?</td>
+      <td><%= check_box(:profile, :immunosuppressive, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Are you on hemodialysis?</td>
+      <td><%= check_box(:profile, :hemodialysis, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Are you medical donor (blood, organ, tissue, semen)?</td>
+      <td><%= check_box(:profile, :med_donor, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Are you exposed to potentially infected blood, organ or body fluids?</td>
+      <td><%= check_box(:profile, :exposed_infected_blood_organ, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Did you receive clotting factor concentrates before 1987?</td>
+      <td><%= check_box(:profile, :clot_factor_1987, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Did you receive blood transfusions or donated organs before July 1992?</td>
+      <td><%= check_box(:profile, :blood_organ_1992, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Do you have elevated liver enzymes?</td>
+      <td><%= check_box(:profile, :elevated_liver_enzymes, {}, true, false) %>   </td>
+    </tr>
+    <tr>
+      <td>Have you been tested or treated for HBV?</td>
+      <td><%= check_box(:profile, :hbv_cared, {}, true, false) %>
+        <%= show_hbv_risk_alert(@profile) %> &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>Are you HCV positive?</td>
+      <td><%= check_box(:profile, :hcv_positive, {}, true, false) %>
+        <%= show_hcv_risk_alert(@profile) %> &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>Are you HIV positive?</td>
+      <td><%= check_box(:profile, :hiv_positive, {}, true, false) %>   </td>
+    </tr>
+    <tr><th colspan="2">  </th></tr>
+    <tr>
+      <td>  </td>
+      <td><%= submit_tag("Save") %>  </td>
+    </tr>
+  <% end %>
+</table>
+
+      </div><!-- end #measureDetailTable -->
+    </div><!-- end #dashboardPeriod -->
+  </div><!-- end #pageContent -->
+</div><!-- end #container -->
+

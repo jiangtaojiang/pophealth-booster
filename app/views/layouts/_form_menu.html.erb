@@ -1,0 +1,25 @@
+<div id="providerReports">
+  <h1><%= link_to 'MU Reporting', dashboard_path %></h1>
+
+  <h1>Equity Boosting</h1>
+  <div class="measureItemList">
+    <%= link_to "Equity Reports", report_equity_path() %><br />
+    <br />
+    <%= link_to 'Find Patient', list_patients_path %><br />
+    <%= link_to 'Add Patient', new_patient_path %><br />
+    <br />
+    <% if(@current_patient)%>
+      <%= link_to "Patient: "+@current_patient_name, show_patient_path(@current_patient) %><br />
+      <div class="measureList">
+        <%= link_to "Health Profile", edit_patient_profile_path(@current_patient) %><br />
+        <% @current_patient.eqconditions.each do |cdn| %>
+          <%= link_to cdn.name+":", edit_condition_url(@current_patient.id, cdn.id) %><br />
+        <% end %>
+        <%= link_to 'Add Condition', new_condition_path(@current_patient) %><br />
+      </div>
+    <% end %>
+    <br />
+    <%= link_to 'Help', equity_help_path %><br />
+    <%= link_to 'Demo Video', equity_demo_path %><br />
+  </div><!-- end #equity -->
+</div><!-- end #providerReports -->

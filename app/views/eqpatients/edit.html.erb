@@ -1,0 +1,38 @@
+<div id="dashboardContainer">
+  <div id="pageContent">
+    <%= render 'layouts/form_menu' %>
+    <div id="equityMain">
+      <div class="equityTable">
+
+<h1>Edit Patient Information</h1>
+<h5>
+  <% @patient.errors.full_messages.each do |msg| %>
+    - <%= msg %><br />
+  <% end %>
+</h5>
+<table id="patientTable">
+  <tr><td>
+<%= form_tag("/patients/"+@patient[:_id].to_s+"/update", :method => :post) do %>
+  <div class="field">
+    <%= label_tag("First Name") %><br />
+    <%= text_field(:patient, :firstname) %>
+  </div>
+  <div class="field">
+    <%= label_tag("Last Name") %><br />
+    <%= text_field(:patient, :lastname) %>
+  </div>
+  <div class="field">
+    <%= label_tag("Member ID (unique)") %><br />
+    <%= text_field(:patient, :member_id) %>
+  </div>
+  <div class="actions">
+    <%= submit_tag("Save") %>
+  </div>
+<% end %>
+  </td></tr>
+</table>
+
+      </div><!-- end #measureDetailTable -->
+    </div><!-- end #dashboardPeriod -->
+  </div><!-- end #pageContent -->
+</div><!-- end #container -->
