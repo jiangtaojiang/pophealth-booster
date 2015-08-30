@@ -1,0 +1,65 @@
+# Booster FAQ #
+
+## What is PopHealth Booster? ##
+
+PopHealth Booster is a scalable web-based solution designed to drastically reduce health disparities in patient populations served by community health centers and clinics. Booster implements medical guidelines on the HHS open source pophealth platform to provide health equity reports for clinics, and generate personalized guideline-based recommendations and  alerts for care providers and patients to take actions to remove disparities at the point of care.
+
+## Why do we care about health disparities? ##
+
+Although a lot of progress have been made toward health equity for everyone, huge health disparities are still persistent in many diseases for patients, rich and poor. This very sad reality is confirmed by the recent reports from CDC, AHRQ, and HHS Healthy People.
+
+For example, there are about 5 million people in US are infected by chronic hepatitis B or C virus, but about 70% of them are not getting needed cares. Globally, about 500 million people are infected by HBV or HCV chronically, which kills about 1 million people every year.  There are many factors causing the hepatitis disparities, including racial, economic and social reasons.  Regardless the reasons, such a big disparity is a shocking failure of our healthcare system. If you have HBV, you don’t want to live without proper care because HBV, the silent killer, may kill you when it wakes up.
+
+As a humane society, we have to find effective solutions now to end health disparities for everyone.  PopHealth Booster is designed as a technology solution for such public cause.  It can be deployed in the normal work flow at community clinics and health centers so that disparities can be caught in real time and fixed at the point of care.
+
+## How can patients get empowered by Booster health equity tool? ##
+
+Booster personalizes medical guidelines for individual patient and, when detecting care disparities for any condition or disease, it will create alerts for the patient that are accessible on Booster web app, by email or by mobile phone texting.  Given the guideline-based recommendations and action alerts when they are needed, the patient will more likely take actions to solve his or her health problems.  For example, the patient may simply remind his or her care provider about the guideline recommendations for his or her risk of chronic hepatitis. Such active patient engagement will strength physician-patient partnership, which will result in better care for the patient and higher health equity achievement for the care provider.
+
+To further engage patients to self-manage their health conditions, Booster will provide mobile access to each medical condition concerning a patient. For example, Booster HBV Mobile App is being developed now to provide decision support to HBV patients. A similar HCV Mobile App will follow.
+
+## How does Booster enable care providers to improve care quality while reduce costs? ##
+
+By providing personalized guideline-based recommendations and alerts, Booster helps physicians and nurses to provide needed cares for certain diseases as recommended by medical guidelines. It also saves time for physicians because Booster provides guideline educations through seamless integration of latest guidelines in the interactive application.
+
+By measuring and reporting health equity in patients of individual clinic, Booster enables the clinic to easily identify health care disparities in real time and take actions to remove the disparities at the point of care..
+
+As a result, health care disparities in many diseases such as chronic hepatitis can be reduced dramatically or eliminated by care providers. This will be translated into better care quality at lower cost for patients and higher patient satisfaction for the clinic.
+
+## EHR can implement medical guidelines. Why do community clinics need something like Booster? ##
+
+There are many reasons for community clinics to have a scalable health equity software like Pophealth Booster:
+
+(1) Community clinics currently do not have any software tool specifically designed for achieving health equity. No EHR provides reports on health equity. No EHR is designed with focus on driving actions to reduce health disparities. Essentially, community clinics have no easy way to view health disparities in their patient populations and to link their information system with health equity improvement efforts. A new solution is urgently needed.
+
+(2) Community clinics have made great progress toward adopting EHR. However, the reality is that EHRs in most clinics do not have the capability of guideline-based alerts. Even if they have EHR with the capability for implementing guideline-based recommendations and alerts, they do not have the expertise and IT resource to implement it now and update it regularly. Ideally, they need free tools or services like Booster to address health disparities.
+
+(3) For a few community clinics or groups with the latest version of EHR from major vendors, they may have implemented alerts for some conditions, which is good news. However, these alerts may not reach the detailed levels as deep as what Booster does. Plus, it’s definitely not a scalable solution for each clinics to implement guidelines in their own EHRs.
+
+(4) Hopefully every EHR vendors will implement guidelines for the purpose of achieving health equity. Realistically though, it’s a big question how long it will take for the EHR industry to implement new features for achieving the common goal of health equity. We know that EHR has been around for decades and yet our health care system still can not implement medical guidelines into daily clinical practice quickly enough.  Thus, it’s critical to have a new approach that can guarantee all community clinics will have free access to health equity tools soon. Patients lack of guideline-recommended cares should not wait any longer. Many patients are dying unnecessarily due to the existence of health disparity in diseases like chronic hepatitis.  Booster is creatively designed to fill this gap in the shortest amount of time and at no cost for community clinics.
+
+(5) Medical guidelines are updated from time to time. Because of our current health information infrastructure is far from efficient, it usually takes painfully long time to get new guideline updates into the routine clinical practice. Physicians and nurses have limited time to get up to speed with new guidelines quickly. This problem will be solved by Booster because Booster can make guideline education seamlessly incorporated in the care delivery workflow soon after new guideline is released.
+
+## How quickly can Booster deliver guideline update? ##
+
+Since Booster is an education only application, it can implement guideline update as quickly as other widely used consumer applications like iTunes or Google do.
+
+## We don’t have EHR. Can we still take advantage of Booster? ##
+
+Yes, you can use Booster without EHR.  PopHealth Booster does not depend on EHR although it can be integrated with EHR if available.  Physician or nurse can enter the needed patient data directly into Booster.
+
+## If I’m an independent provider or working in a small community clinic, how can Booster help me to reduce health disparities in my patients? ##
+
+PopHealth Booster is available on cloud server such as Amazon computing cloud. Independent providers or small community clinics can subscribe the cloud service and run free Booster in the cloud without the need of traditional IT resources.
+
+## We want to control patient data completely in our clinic. How should we use Booster? ##
+
+Booster is open source software. You can download it for free and install it in your clinic. The health equity data will stay within the application.
+
+## How is Booster different from EHR or PHR? ##
+
+Booster is not intended to keep track of patient data as EHR.  It may integrate data from EHR with permission. Booster is designed to make data easy-to-enter and understand for patients and thus it tracks patient data more like PHR. However, unlike PHR and EHR, Booster is purely focused on providing actionable guideline-based information using patient data.
+
+## How is Booster different from decision support system? ##
+
+Booster basically personalizes medical guidelines, measures health care equity, and provide actionable information for education purpose. These education information will help care providers and patients to make health decisions. But, Booster is not intended to make decision for care providers or patients.
